@@ -47,7 +47,7 @@ const base = {
   night: [
     "22:30  Tired, but still scrolling",
     "22:50  You fall asleep thinking about tomorrow",
-    "23:10  You go to bed after整理ng the day",
+    "23:10  You go to bed after wrapping up the day",
     "23:50  The day ends much like the others"
   ]
 };
@@ -86,7 +86,7 @@ const warmLines = [
   "20:40  You decide not to worry about tomorrow yet",
   "21:40  You allow yourself real rest",
   "22:50  You put the phone down for tomorrow-you",
-  "23:10  You go to bed after整理ng the day",
+  "23:10  You go to bed feeling settled",
   "23:30  Today ends gently"
 ];
 
@@ -104,7 +104,6 @@ function generateFuture(s, f, m, r) {
   else lines.push("10:30  Focus breaks easily");
 
   lines.push(moodPick());
-
   lines.push(pick(base.lunch));
 
   if (m >= 2) lines.push("15:40  Your body feels lighter");
