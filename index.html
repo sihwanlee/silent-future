@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Silent Future</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#000000" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>Silent Future</h1>
+    <p class="sub">A quiet snapshot of your day, 3 years later</p>
+
+    <section class="card">
+      <div class="row">
+        <label>📱 Screen time</label>
+        <select id="screen">
+          <option value="0">Low</option>
+          <option value="1">Medium</option>
+          <option value="2">High</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label>🧠 Focus</label>
+        <select id="focus">
+          <option value="0">Low</option>
+          <option value="1">Medium</option>
+          <option value="2">High</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label>🏃 Movement</label>
+        <select id="move">
+          <option value="0">Low</option>
+          <option value="1">Medium</option>
+          <option value="2">High</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label>🛌 Recovery (rest)</label>
+        <select id="rest">
+          <option value="0">Low</option>
+          <option value="1">Medium</option>
+          <option value="2">High</option>
+        </select>
+      </div>
+
+      <button id="btnSee">See the future</button>
+    </section>
+
+    <section class="card" id="result" hidden>
+      <pre id="future"></pre>
+      <button id="btnCopy" class="ghost">Copy result</button>
+      <button id="btnAgain" class="ghost">Try again</button>
+    </section>
+
+    <p class="foot">No login · No tracking · PWA</p>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js");
+    }
+  </script>
+</body>
+</html>
